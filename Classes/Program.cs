@@ -17,6 +17,22 @@ namespace Classes
             productManager.Add();
             productManager.Update();
 
+            Customer customer = new Customer();
+            customer.Id = 1;
+            customer.City = "Istanbul";
+            customer.FirstName = "Ozge"; // bir classın propertysini esitlediğimde ---set--- blogu calısır.
+            customer.LastName = "Cakir";
+
+            Customer customer2 = new Customer()
+            {
+                Id = 2,
+                City = "Ankara",
+                FirstName = "Ayse",
+                LastName = "Cakir",
+            };
+
+            Console.WriteLine(customer2.FirstName); // --- get --- blogu calısır çünkü bunu al demek istemektedir.
+
             Console.ReadLine();
         }
     }
